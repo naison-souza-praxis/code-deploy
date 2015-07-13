@@ -1,8 +1,13 @@
 version: 0.1
-os: linux 
+os: linux
 files:
-  source:  /
-  destination: /home/ubuntu/web
+  - source: /
+    destination: /home/ubuntu/web
 permissions:
-  owner: ubuntu
-  group: ubuntu
+  - object: /home/ubuntu/web
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
+    type:
+       - file
